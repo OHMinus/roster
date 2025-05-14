@@ -1,0 +1,32 @@
+#top{
+    margin: 0;
+    height: 100dvh;
+    display: grid;
+	grid-template-rows: minmax(0, max-content) 1fr;
+	grid-template-columns: 1fr;
+    gap: 2px;
+}
+
+.main header{
+    padding-left: 1dvw;
+}
+
+header *{
+    display: inline;
+}
+
+.version{
+    font-size: .7em;
+}
+
+.prompt{
+    margin-left: 25dvw;
+    width: 50dvw;
+    display: flex;
+    flex-direction:column ; 
+    justify-content: center;
+    text-align: center;
+}
+a{
+    display: block;
+}

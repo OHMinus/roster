@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roster.exe</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./subset.css">
+    <script type="text/javascript" src="/eel.js"></script>
+     <link rel="stylesheet" href="./databaseView.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="top">
+        <header>
+            <p>Loaster.exe</p>
+            <p class="version">Ver 1.0</p>
+            <a class="btn" onclick="ClearData()">Clear Local storage</a>
+            <a class="btn" href="https://ohminus.github.io/roster/" target="_blank">Docs</a>
+            <a class="btn" href="https://github.com/OHMinus/roster" target="_blank">github</a>
+        </header>
+        <article class="prompt">
+            <p>ファイルを選択してください</p>
+            <a class="btn" onclick="load()">Select File</a>
+            <div id="LoadSavedData">
+                <p>ロード可能な前回データが発見されました。</p>
+                <a class="btn" onclick="LoadSavedData()">Load Saved data</a>
+            </div>
+        </article>
+    </section>
+    <section id="loader">
+        <div id="loading-wrapper">
+            <div id="loading-text">LOADING</div>
+            <div id="loading-content"></div>
+        </div>
+        <div id="loading-message">
+        </div>
+    </section>
+    <section id="main">
+        <header>
+            <p>Roaster.exe</p>
+            <p class="version">Ver 0.5 (dev)</p>
+            <a class="btn" onclick="SaveUTF()">Save</a>
+            <a class="btn" onclick="SaveSHIFT()">Save (compatible with Excel)</a>
+            <a class="btn" href="./index.html">Reload</a>
+        </header>
+        <article id="student-selector">
+            <p>Select member</p>
+        </article>
+        <div class="card table-viewer submitted">
+            <h2>Submitted</h2>
+            <div class="table-wapper">
+                <table id="SubmittedContent"></table>
+            </div>
+        </div>
+        <div class="card table-viewer suggested">
+            <h2>Suggested</h2>
+            <div class="table-wapper">
+                <table id="SuggestedContent"></table>
+            </div>
+        </div>
+        <div class="card control">
+            <a class="btn2" onclick="Accsept()" id="AccseptModify">Accept All</a>
+            <a class="btn2" onclick="Reject()" id="RejectModify">Reject All</a>
+            <a class="btn2" onclick="EnableModify()" id="EnableModify">Enable Edit</a>
+        </div>
+        <article id="pdf-view">
+            <iframe id="pdf-viewer" src="./useage.html"></iframe>
+        </article>
+    <div id="popUp" class="popUp">
+        info:
+        <p id="msg">Nomal pop up</p>
+    </div>
+    <div id="popUp-error" class="popUp popUp-error">
+        error:
+        <p id="msg">Error pop up</p>
+    </div>
+</body>
+<script>
+    var element = document.getElementById("loader");
+    element.style = "display:None;"
+    element = document.getElementById("main");
+    element.style = "display:None;"
+    element = document.getElementById("popUp");
+    element.style = "display:none"
+    element = document.getElementById("popUp-error");
+    element.style = "display:none"
+    eel.Refresh();
+
+    if(localStorage.length > 1 && localStorage.getItem("Header") != null){
+        element = document.getElementById("LoadSavedData");
+        element.style = "display:block"
+    }else{
+        element = document.getElementById("LoadSavedData");
+        element.style = "display:none"
+    }
+
+    function load(){
+        console.log('load');
+        eel.Ignition()()
+    }
+
+    function jump(){
+        var element = document.getElementById("top");
+        element.style = "display:None;"
+        element = document.getElementById("loader");
+        element.style = ""
+    }
+    eel.expose(jump);
+    
+</script>
+
+<script src="./csvVew.js"></script>
+<script src="./dataset.js"></script>
+</html>

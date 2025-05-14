@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+body {
+    background-color: var(--base);
+    font-family: 'Orbitron', "Noto Sans JP", sans-serif;
+    color:  var(--font-color);
+    text-shadow: var(--blue) 1px 0 10px;
+    overflow:hidden;
+    margin: 0;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-color: var(--blue);
+  transition: .4s;
+  color: var(--font-color);
+}
+
+.btn:hover {
+  background: var(--blue);
+  color:  var(--font-color);
+}
+
+:root {
+    --base:#222;
+    --font-color:#eff;
+    --green: #00B06B;
+    --red:#FF4B00;
+    --blue:#0AE0DF;
+    --yellow: #F2E700;
+}
+
+*::-webkit-scrollbar {
+  background: var(--base);
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--font-color);
+    border-radius: 0;
+}
+*::-webkit-scrollbar-thumb:hover {
+  border-radius: 20px;
+  transition: 10s;
+}
