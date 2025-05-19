@@ -3,7 +3,6 @@ import datetime
 import cui
 import core
 import withGui
-import os
 
 def main():
     
@@ -40,6 +39,4 @@ def print_help():
 
 
 if __name__ == "__main__":
-    if "nt" in os.name:
-        sys.setdefaultencoding('cp932')
     main()

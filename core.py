@@ -218,9 +218,6 @@ class Student:
 
     def complementFaculty(self):
         # 学部名を取得するための正規表現
-
-    def complementFaculty(self):
-        # 学部名を取得するための正規表現
         faculty_patterns = {
             "国": "国際教養学部",
             "文": "文学部",
