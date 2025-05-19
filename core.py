@@ -6,7 +6,7 @@ import  datetime
 from    datetime import datetime
 import re
 from io import StringIO
-import json
+import String_helper
 import csv
 
 facultys = {}
@@ -192,18 +192,23 @@ class Student:
             
 
     def SpilitFac(self):
-        print(self.major)
-        tmp = self.major.split("学部")
+        tmp = String_helper.Replace(self.major,"").split("学部")
         self.faculty = f"{tmp[0]}学部"
         if len(tmp) > 1:
-            tmp = tmp[1].split("学科")
-            self.department = f"{tmp[0]}学科"
-            if len(tmp) > 1:
+            if len(tmp[1].split("学科")) > 1 or len(tmp[1].split("課程")) > 1:
+                if len(tmp[1].split("学科")) > 1:
+                    tmp = tmp[1].split("学科")
+                    self.department = f"{tmp[0]}学科"
+                else:
+                    tmp = tmp[1].split("課程")
+                    self.department = f"{tmp[0]}課程"
                 tmp = tmp[1].split("コース")
                 if(tmp[0] != ""):
                     self.course = f"{tmp[0]}コース"
                     if len(tmp) > 1:
                         self.field = tmp[1]
+            else:
+                self.department = f"{tmp[1]}学科"
 
     def SetAddress(self,rawaddress):
         zipCodeTmp = re.search(r"\d{3}[-]{0,1}\d{4}", rawaddress)
