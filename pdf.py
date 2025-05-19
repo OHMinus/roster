@@ -4,6 +4,7 @@ import main
 import re
 import datetime
 import core
+import unicodedata
 
 
 def pdf_to_text(pdf_path):
@@ -18,7 +19,11 @@ def pdf_to_text(pdf_path):
 
     # テキストの抽出
     text = page.extract_text()
-    return text
+
+    with open(f"{pdf_path}.txt", 'w', encoding="utf-8",errors='ignore') as f:
+        f.write(unicodedata.normalize('NFKC',text))
+        
+    return unicodedata.normalize('NFKC',text)
 
 def Test():
     # テスト用のPDFファイルのパス
@@ -67,7 +72,9 @@ def pdf_to_student(pdf_path):
             case l if "生年月日" in l:
                 stu.birth = core.date_to_str(l.replace("生年月日", "").strip())
             case l if "携帯" in l:
-                stu.phone_number = l.replace("携帯", "").strip()
+                number = l.replace("携帯TEL", "").strip()
+                number = number.replace("-","")
+                stu.phone_number = f"{number[0:3]}-{number[3:7]}-{number[7:11]}"
             case l if "メールアドレス" in l:
                 stu.email = l.replace("メールアドレス", "").strip()
             case l if "現住所" in l:
