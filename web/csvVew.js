@@ -125,6 +125,7 @@ async function LoadDataByID(id){
     tableGenerator(table,content["submitted"]);
     table = document.getElementById("SuggestedContent");
     data = content["suggested"];
+    table.innerHTML = ""
     if(SharrowEquals(content["submitted"],data)){
         var tr = document.createElement("tr");
         var td = document.createElement("td");
