@@ -8,12 +8,14 @@ import re
 from io import StringIO
 import String_helper
 import csv
+import encodingDitector
 
 facultys = {}
 
 def getFacPatterns(patternFile: str):
     if len(facultys) == 0:
-        with open ( patternFile , 'r' ) as f :
+        encoding = encodingDitector.encordingDItector(patternFile)
+        with open ( patternFile , 'r' ,encoding=encoding) as f :
             csvContent = csv.reader(f)
             for row in csvContent:
                 facultys[re.compile(row[0])] = row[1]

@@ -131,7 +131,7 @@ def SaveDir(encoding,datas):
 @eel.expose
 def Getpdf(filepath):
     gfg = ""
-    with open(filepath, "rb") as image_file:
+    with open(filepath,  "rb") as image_file:
         # bufに格納
         buf = image_file.read()
     

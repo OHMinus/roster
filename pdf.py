@@ -19,7 +19,7 @@ def pdf_to_text(pdf_path):
 
     # テキストの抽出
     text = page.extract_text()
-
+    
     with open(f"{pdf_path}.txt", 'w', encoding="utf-8",errors='ignore') as f:
         f.write(unicodedata.normalize('NFKC',text))
         
