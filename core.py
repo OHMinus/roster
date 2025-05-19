@@ -207,8 +207,9 @@ class Student:
 
     def SetAddress(self,rawaddress):
         zipCodeTmp = re.search(r"\d{3}[-]{0,1}\d{4}", rawaddress)
-        self.zip_code = zipCodeTmp[0]
-        self.address = rawaddress.replace("〒", "").replace(self.zip_code, "").strip().replace("\n", "")
+        if zipCodeTmp is not None:
+            self.zip_code = zipCodeTmp[0]
+            self.address = rawaddress.replace("〒", "").replace(self.zip_code, "").strip().replace("\n", "")
 
     def complementFaculty(self):
         # 学部名を取得するための正規表現
