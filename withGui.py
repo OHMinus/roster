@@ -1,3 +1,8 @@
+"""
+@file withGui.py
+@brief GUI (Graphical User Interface) を提供します。
+@details tkinter と eel を使用して GUI を構築し、学生データの処理を行います。
+"""
 import tkinter.filedialog
 import eel
 import core
@@ -17,6 +22,12 @@ students = []
 stream :io.StringIO = None
 
 def CheckError(stu):
+    """
+    @brief 学生データのエラーチェックを行います。
+    @param stu (core.Student): チェックする Student オブジェクト。
+    @return (bool): エラーがある場合は True、ない場合は False。
+    @details 学生の住所と学部情報の整合性をチェックします。
+    """
     result = False
     isLiveChiba = False
 
@@ -34,6 +45,12 @@ def CheckError(stu):
     return result
 
 def Json2Student(StudentJson : str):
+    """
+    @brief JSON 文字列を Student オブジェクトに変換します。
+    @param StudentJson (str): 学生情報の JSON 文字列。
+    @return (core.Student): 変換された Student オブジェクト。
+    @details JSON 文字列を解析し、Student オブジェクトの属性に値を設定します。
+    """
     dic : dict = json.load(StudentJson)
     ref = core.Student.GetHeader().keys()
     stu = core.Student()
@@ -44,15 +61,30 @@ def Json2Student(StudentJson : str):
 
 @eel.expose
 def CheckErrorJson(StudentJson : str):
+    """
+    @brief JSON 形式の学生データのエラーチェックを行います (eel.expose)。
+    @param StudentJson (str): 学生情報の JSON 文字列。
+    @return (bool): エラーがある場合は True、ない場合は False。
+    """
     return CheckError(Json2Student(StudentJson))
 
 @eel.expose
 def UpdateStudent(index : int, StudentJson : str):
+    """
+    @brief 学生データを更新します (eel.expose)。
+    @param index (int): 更新する学生データのインデックス。
+    @param StudentJson (str): 更新後の学生情報の JSON 文字列。
+    @return (str): 更新された学生データの JSON 表現。
+    """
     students[index] = Json2Student(StudentJson)
     return json.dump(students[index])
 
 @eel.expose
 def Ignition():
+    """
+    @brief 学生データの読み込みと GUI への表示を開始します (eel.expose)。
+    @details ディレクトリ選択ダイアログを表示し、PDF ファイルから学生データを読み込んで GUI に表示します。
+    """
     input_dir = tkinter.filedialog.askdirectory()
     eel.jump()
     students.extend(core.loadDir(input_dir))
@@ -92,11 +124,21 @@ def Ignition():
 
 @eel.expose
 def Refresh():
+    """
+    @brief 学生データをクリアします (eel.expose)。
+    @details 読み込まれている学生データのリストを空にします。
+    """
     print("clear")
     students.clear()
 
 @eel.expose
 def SaveDir(encoding,datas):
+    """
+    @brief 学生データを CSV ファイルに保存します (eel.expose)。
+    @param encoding (str): CSV ファイルのエンコーディング。
+    @param datas (list): 保存する学生データのリスト。
+    @details ファイル保存ダイアログを表示し、学生データを CSV ファイルに保存します。
+    """
     filename = tkinter.filedialog.asksaveasfilename(
         title = "Save as...",
         filetypes = [("CSV", ".csv")], # ファイルフィルタ
@@ -130,6 +172,12 @@ def SaveDir(encoding,datas):
         
 @eel.expose
 def Getpdf(filepath):
+    """
+    @brief PDF ファイルの内容を base64 エンコードして返します (eel.expose)。
+    @param filepath (str): PDF ファイルのパス。
+    @return (str): base64 エンコードされた PDF データ URI。
+    @details PDF ファイルを読み込み、base64 エンコードして Data URI 形式で返します。
+    """
     gfg = ""
     with open(filepath,  "rb") as image_file:
         # bufに格納

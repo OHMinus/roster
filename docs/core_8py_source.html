@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: core.py ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('core_8py_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">core.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="core_8py.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacecore.html">    1</a></span><span class="keyword">import</span> os</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> glob</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> pdf</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> main</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span>  datetime</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">from</span>    datetime <span class="keyword">import</span> datetime</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> re</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> String_helper</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> csv</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> encodingDitector</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacecore.html#ae3a81a35e12bfe4ad623f3d8860014c8">   13</a></span>facultys = {}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="" data-end="">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacecore.html#adcd673e162ad9a5d950c9d709f8717c0">   15</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacecore.html#adcd673e162ad9a5d950c9d709f8717c0">getFacPatterns</a>(patternFile: str):</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span> len(facultys) == 0:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        encoding = <a class="code hl_function" href="namespaceencoding_ditector.html#ad6718b7917955b7f8ecc8c8fa9fb9c82">encodingDitector.encordingDItector</a>(patternFile)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">with</span> open ( patternFile , <span class="stringliteral">&#39;r&#39;</span> ,encoding=encoding) <span class="keyword">as</span> f :</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            csvContent = csv.reader(f)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">for</span> row <span class="keywordflow">in</span> csvContent:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                facultys[re.compile(row[0])] = row[1]</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> facultys</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+</div>
+<div class="foldopen" id="foldopen00025" data-start="" data-end="">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacecore.html#a95629f5084854cea362a505519423502">   25</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacecore.html#a95629f5084854cea362a505519423502">loadDir</a>(dirPath):</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    files =[]</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    print(f<span class="stringliteral">&quot;searching @ {dirPath}&quot;</span>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> os.path.isfile(dirPath):</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">raise</span> Exception(<span class="stringliteral">&quot;Invalid path&quot;</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isabs(dirPath):</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        dirPath = os.path.abspath(dirPath)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">if</span> str(dirPath).endswith(<span class="stringliteral">&quot;/&quot;</span>):</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        dirPath = dirPath +<span class="stringliteral">&quot;*&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        dirPath = dirPath +<span class="stringliteral">&quot;/*&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    files = glob.glob(dirPath+<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> len(files) == 0:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">raise</span> Exception(<span class="stringliteral">&quot;No files in directory&quot;</span>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    students = []</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">for</span> file <span class="keywordflow">in</span> files:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> file.endswith(<span class="stringliteral">&quot;.pdf&quot;</span>):</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="comment"># PDFファイルを読み込む</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            students.append(<a class="code hl_function" href="namespacepdf.html#a0146168ab7eec4b69552efd92e5d6161">pdf.pdf_to_student</a>(file))</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span> student <span class="keywordflow">in</span> students:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        student.EstimateFaculty(<span class="stringliteral">&quot;faculty_patterns.csv&quot;</span>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> students</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+</div>
+<div class="foldopen" id="foldopen00056" data-start="" data-end="">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacecore.html#a58713c15e7d8678c7ed4f77d5efe8885">   56</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacecore.html#a58713c15e7d8678c7ed4f77d5efe8885">date_to_str</a>(date:str):</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">#型式推論</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment"># 例: &quot;平成30年4月1日&quot; -&gt; &quot;2018-04-01&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    result : datetime.date = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment"># 元号一覧</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    gengo = {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="stringliteral">&quot;明治&quot;</span>: 1868,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="stringliteral">&quot;大正&quot;</span>: 1912,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="stringliteral">&quot;昭和&quot;</span>: 1926,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="stringliteral">&quot;平成&quot;</span>: 1989,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="stringliteral">&quot;令和&quot;</span>: 2019</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    wareki : int = -1</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> g <span class="keywordflow">in</span> gengo.keys():</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">if</span> g <span class="keywordflow">in</span> date:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            wareki = gengo.index(g)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">break</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    date = date.replace(<span class="stringliteral">&quot;元&quot;</span>, <span class="stringliteral">&quot;0&quot;</span>).replace(<span class="stringliteral">&quot;年&quot;</span>,<span class="stringliteral">&quot;/&quot;</span>).replace(<span class="stringliteral">&quot; &quot;</span>,<span class="stringliteral">&quot;&quot;</span>).replace(<span class="stringliteral">&quot;月&quot;</span>,<span class="stringliteral">&quot;/&quot;</span>).replace(<span class="stringliteral">&quot;日&quot;</span>,<span class="stringliteral">&quot;/&quot;</span>).replace(<span class="stringliteral">&quot;.&quot;</span>,<span class="stringliteral">&quot;/&quot;</span>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    judger = re.compile(<span class="stringliteral">r&quot;\d{4}\/\d{1,2}\/\d{1,2}&quot;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> date[len(date)-1] == <span class="stringliteral">&quot;/&quot;</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        date = date[0:len(date)-1]</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> judger.search(date) == <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        result = datetime.strptime(date, <span class="stringliteral">&quot;%y/%m/%d&quot;</span>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        result = datetime.strptime(date, <span class="stringliteral">&quot;%Y/%m/%d&quot;</span>)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> wareki != -1:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="comment"># 和暦から西暦に変換</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        result = datetime.date(result.year + gengo.values()[wareki], result.month, result.day)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> result</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+</div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html">   94</a></span><span class="keyword">class </span><a class="code hl_class" href="classcore_1_1_student.html">Student</a>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    name: str</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    nameKana: str</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    id : str</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    gread: int</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    faculty : str</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    facultycomp : str</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    department : str</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    course : str</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    field :str</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    major : str</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    majorcomp : str</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    birth : datetime</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    zip_code : str</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    address : str</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    phone_number : str</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    email : str</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    file_path : str</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    isLiveChiba : bool</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="preprocessor">@staticmethod</span></div>
+<div class="foldopen" id="foldopen00115" data-start="" data-end="">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#ad262e45790c9d03700ec378cb67e0774">  115</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#ad262e45790c9d03700ec378cb67e0774">GetHeader</a>():</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="stringliteral">&quot;name&quot;</span>:<span class="stringliteral">&quot;名前&quot;</span>, </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="stringliteral">&quot;nameKana&quot;</span>:<span class="stringliteral">&quot;氏名ふりがな&quot;</span>, </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="stringliteral">&quot;id&quot;</span>:<span class="stringliteral">&quot;学籍番号&quot;</span>, </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="stringliteral">&quot;gread&quot;</span>:<span class="stringliteral">&quot;学年&quot;</span>,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="stringliteral">&quot;major&quot;</span>:<span class="stringliteral">&quot;学部・学科&quot;</span>, </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="stringliteral">&quot;faculty&quot;</span>:<span class="stringliteral">&quot;学部&quot;</span>, </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="stringliteral">&quot;department&quot;</span>:<span class="stringliteral">&quot;学科&quot;</span>, </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="stringliteral">&quot;course&quot;</span>:<span class="stringliteral">&quot;コース&quot;</span>,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="stringliteral">&quot;field&quot;</span>:<span class="stringliteral">&quot;専攻&quot;</span>, </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="stringliteral">&quot;facultycomp&quot;</span>:<span class="stringliteral">&quot;推測された学部等&quot;</span>,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="stringliteral">&quot;birth&quot;</span>:<span class="stringliteral">&quot;生年月日&quot;</span>, </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="stringliteral">&quot;phone_number&quot;</span>:<span class="stringliteral">&quot;携帯電話番号&quot;</span>, </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="stringliteral">&quot;email&quot;</span>:<span class="stringliteral">&quot;メールアドレス&quot;</span>,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="stringliteral">&quot;zip_code&quot;</span>:<span class="stringliteral">&quot;郵便番号&quot;</span>,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="stringliteral">&quot;address&quot;</span>:<span class="stringliteral">&quot;現住所&quot;</span>,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="stringliteral">&quot;isLiveChiba&quot;</span>:<span class="stringliteral">&quot;千葉に住民票があるか&quot;</span>,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="stringliteral">&quot;file_path&quot;</span> : <span class="stringliteral">&quot;ファイルパス&quot;</span></div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00136" data-start="" data-end="">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a105919ca2c2e76b63b926c652aa23911">  136</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#a105919ca2c2e76b63b926c652aa23911">__init__</a>(self, name: str = <span class="stringliteral">&quot;&quot;</span> , nameKana: str = <span class="stringliteral">&quot;&quot;</span>, id: str = <span class="stringliteral">&quot;&quot;</span>, gread: int = 0, faculty: str = <span class="stringliteral">&quot;&quot;</span>, department: str = <span class="stringliteral">&quot;&quot;</span>, major: str = <span class="stringliteral">&quot;&quot;</span>,field:str = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    birth: datetime = <span class="keywordtype">None</span>, zip_code: str = <span class="stringliteral">&quot;&quot;</span>, address: str = <span class="stringliteral">&quot;&quot;</span>, phone_number: str = <span class="stringliteral">&quot;&quot;</span>, email: str = <span class="stringliteral">&quot;&quot;</span>):</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a6dd11ee5f6229210dd8c85c3a9d7a14f">  138</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a6dd11ee5f6229210dd8c85c3a9d7a14f">name</a> = name</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a4c21799273c9cafeb281a11e2586b4b3">  139</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a4c21799273c9cafeb281a11e2586b4b3">nameKana</a> = nameKana</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a0a7e858d1b6e9f0aef6b3cea42c0089d">  140</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a0a7e858d1b6e9f0aef6b3cea42c0089d">id</a> = id</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#acf531c1046abf6573c235e53b994d2eb">  141</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#acf531c1046abf6573c235e53b994d2eb">gread</a> = gread</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a4d1d620037a83713f776f186fbcb5dd2">  142</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a4d1d620037a83713f776f186fbcb5dd2">faculty</a> = faculty</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#ab9bf3e03fe969a3f9282656d4131c054">  143</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#ab9bf3e03fe969a3f9282656d4131c054">department</a> = department</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a83ee0547ebbd32ff5744dfe5b3b2f305">  144</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a83ee0547ebbd32ff5744dfe5b3b2f305">major</a> = major</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#af5a982565bb661bede766dc426a66eec">  145</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#af5a982565bb661bede766dc426a66eec">birth</a> = birth</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a2b425512c6295dbb20d72d5169cffbf8">  146</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a2b425512c6295dbb20d72d5169cffbf8">zip_code</a> = zip_code</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#af3d8b3e574b3fb03ac29de14f6199466">  147</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#af3d8b3e574b3fb03ac29de14f6199466">address</a> = address</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a64b0645015bd8b70d978b702fd536b13">  148</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a64b0645015bd8b70d978b702fd536b13">phone_number</a> = phone_number</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#ad97c43cde41b07ec33cd66933e0fc28d">  149</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#ad97c43cde41b07ec33cd66933e0fc28d">email</a> = email</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#ab041d5d11f770bd04d3302399090c84d">  150</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#ab041d5d11f770bd04d3302399090c84d">field</a> = field</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a725d727177d5395a083d75b29aacd298">  151</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a725d727177d5395a083d75b29aacd298">course</a> = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a4e59b4d5a4f133c678990be393ad8ef8">  152</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a4e59b4d5a4f133c678990be393ad8ef8">facultycomp</a> = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#aef866a7701523e95cbc5f94bb4cdf462">  153</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#aef866a7701523e95cbc5f94bb4cdf462">file_path</a> = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">if</span> address == <span class="stringliteral">&quot;&quot;</span>:</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#aa7d84ce9a54e8b703aa6c15d5a8731e8">  155</a></span>            self.<a class="code hl_variable" href="classcore_1_1_student.html#aa7d84ce9a54e8b703aa6c15d5a8731e8">isLiveChiba</a> = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">elif</span> <span class="stringliteral">&quot;千葉県&quot;</span> <span class="keywordflow">in</span> self.<a class="code hl_variable" href="classcore_1_1_student.html#af3d8b3e574b3fb03ac29de14f6199466">address</a>:</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            self.<a class="code hl_variable" href="classcore_1_1_student.html#aa7d84ce9a54e8b703aa6c15d5a8731e8">isLiveChiba</a> = <span class="keyword">True</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            self.<a class="code hl_variable" href="classcore_1_1_student.html#aa7d84ce9a54e8b703aa6c15d5a8731e8">isLiveChiba</a> = <span class="keyword">False</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+</div>
+<div class="foldopen" id="foldopen00161" data-start="" data-end="">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#af76adde2bef1dd899d2d797ed31160d9">  161</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#af76adde2bef1dd899d2d797ed31160d9">__str__</a>(self):</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">return</span> f<span class="stringliteral">&quot;Name: {self.name}, ID: {self.id}, Gread: {self.gread}, Faculty: {self.faculty}, Department: {self.department}, Major: {self.major}, Birth: {self.birth}, Zip Code: {self.zip_code}, Address: {self.address}, Phone Number: {self.phone_number}, Email: {self.email}&quot;</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    </div>
+</div>
+<div class="foldopen" id="foldopen00164" data-start="" data-end="">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a429cc47ff40b79d942898a5d6e1ececc">  164</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#a429cc47ff40b79d942898a5d6e1ececc">__eq__</a>(self, other):</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span> <span class="keywordflow">not</span> isinstance(other, self):</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordflow">return</span> <span class="keyword">False</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        var_list = vars(self)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">for</span> key, value <span class="keywordflow">in</span> other.__dict__.items():</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordflow">if</span> key <span class="keywordflow">not</span> <span class="keywordflow">in</span> var_list <span class="keywordflow">or</span> var_list[key] != value:</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="keywordflow">return</span> <span class="keyword">False</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="comment"># すべての属性が一致する場合</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">return</span> <span class="keyword">True</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+</div>
+<div class="foldopen" id="foldopen00175" data-start="" data-end="">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#af07f9f1539019d03f1fc6cdeabcbfabe">  175</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#af07f9f1539019d03f1fc6cdeabcbfabe">EstimateFaculty</a>(self , patternFile: str):</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#afefe35f33b7714b5c4a18d426adf1f44">  176</a></span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#afefe35f33b7714b5c4a18d426adf1f44">facultys</a> = <a class="code hl_function" href="namespacecore.html#adcd673e162ad9a5d950c9d709f8717c0">getFacPatterns</a>(patternFile)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a0a7e858d1b6e9f0aef6b3cea42c0089d">id</a>.upper()</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">for</span> pattern, faculty <span class="keywordflow">in</span> self.<a class="code hl_variable" href="classcore_1_1_student.html#afefe35f33b7714b5c4a18d426adf1f44">facultys</a>.items():</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">if</span> pattern.match(self.<a class="code hl_variable" href="classcore_1_1_student.html#a0a7e858d1b6e9f0aef6b3cea42c0089d">id</a>):</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                self.<a class="code hl_variable" href="classcore_1_1_student.html#a4e59b4d5a4f133c678990be393ad8ef8">facultycomp</a> = faculty</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                <span class="keywordflow">break</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            self.<a class="code hl_variable" href="classcore_1_1_student.html#a4e59b4d5a4f133c678990be393ad8ef8">facultycomp</a> = <span class="stringliteral">&quot;未解決&quot;</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+</div>
+<div class="foldopen" id="foldopen00185" data-start="" data-end="">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a1ede1881aad308bbaf544b182f5d21de">  185</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#a1ede1881aad308bbaf544b182f5d21de">getDict</a>(self):</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        keys = self.<a class="code hl_function" href="classcore_1_1_student.html#ad262e45790c9d03700ec378cb67e0774">GetHeader</a>()</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">for</span> key <span class="keywordflow">in</span> keys:</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">if</span> isinstance(keys[key], datetime):</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                keys[key] = keys[key].isoformat()</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                keys[key] = str(getattr(self,key))</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">return</span> keys</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+</div>
+<div class="foldopen" id="foldopen00196" data-start="" data-end="">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a6a31a0fe29309c9eef9af5172a8cc3d6">  196</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#a6a31a0fe29309c9eef9af5172a8cc3d6">SpilitFac</a>(self):</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        tmp = <a class="code hl_function" href="namespace_string__helper.html#a8fbd3dd055e54b4ba47cab39ea93b69b">String_helper.Replace</a>(self.<a class="code hl_variable" href="classcore_1_1_student.html#a83ee0547ebbd32ff5744dfe5b3b2f305">major</a>,<span class="stringliteral">&quot;&quot;</span>).split(<span class="stringliteral">&quot;学部&quot;</span>)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        self.<a class="code hl_variable" href="classcore_1_1_student.html#a4d1d620037a83713f776f186fbcb5dd2">faculty</a> = f<span class="stringliteral">&quot;{tmp[0]}学部&quot;</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">if</span> len(tmp) &gt; 1:</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">if</span> len(tmp[1].split(<span class="stringliteral">&quot;学科&quot;</span>)) &gt; 1 <span class="keywordflow">or</span> len(tmp[1].split(<span class="stringliteral">&quot;課程&quot;</span>)) &gt; 1:</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                <span class="keywordflow">if</span> len(tmp[1].split(<span class="stringliteral">&quot;学科&quot;</span>)) &gt; 1:</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                    tmp = tmp[1].split(<span class="stringliteral">&quot;学科&quot;</span>)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                    self.<a class="code hl_variable" href="classcore_1_1_student.html#ab9bf3e03fe969a3f9282656d4131c054">department</a> = f<span class="stringliteral">&quot;{tmp[0]}学科&quot;</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                    tmp = tmp[1].split(<span class="stringliteral">&quot;課程&quot;</span>)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                    self.<a class="code hl_variable" href="classcore_1_1_student.html#ab9bf3e03fe969a3f9282656d4131c054">department</a> = f<span class="stringliteral">&quot;{tmp[0]}課程&quot;</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                tmp = tmp[1].split(<span class="stringliteral">&quot;コース&quot;</span>)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                if(tmp[0] != <span class="stringliteral">&quot;&quot;</span>):</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                    self.<a class="code hl_variable" href="classcore_1_1_student.html#a725d727177d5395a083d75b29aacd298">course</a> = f<span class="stringliteral">&quot;{tmp[0]}コース&quot;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                    <span class="keywordflow">if</span> len(tmp) &gt; 1:</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                        self.<a class="code hl_variable" href="classcore_1_1_student.html#ab041d5d11f770bd04d3302399090c84d">field</a> = tmp[1]</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                self.<a class="code hl_variable" href="classcore_1_1_student.html#ab9bf3e03fe969a3f9282656d4131c054">department</a> = f<span class="stringliteral">&quot;{tmp[1]}学科&quot;</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+</div>
+<div class="foldopen" id="foldopen00215" data-start="" data-end="">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a3b0ed3b38dcd7380fdc001aa7360a803">  215</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#a3b0ed3b38dcd7380fdc001aa7360a803">SetAddress</a>(self,rawaddress):</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        zipCodeTmp = re.search(<span class="stringliteral">r&quot;\d{3}[-]{0,1}\d{4}&quot;</span>, rawaddress)</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> zipCodeTmp <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            self.<a class="code hl_variable" href="classcore_1_1_student.html#a2b425512c6295dbb20d72d5169cffbf8">zip_code</a> = zipCodeTmp[0]</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            self.<a class="code hl_variable" href="classcore_1_1_student.html#af3d8b3e574b3fb03ac29de14f6199466">address</a> = rawaddress.replace(<span class="stringliteral">&quot;〒&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).replace(self.<a class="code hl_variable" href="classcore_1_1_student.html#a2b425512c6295dbb20d72d5169cffbf8">zip_code</a>, <span class="stringliteral">&quot;&quot;</span>).strip().replace(<span class="stringliteral">&quot;\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+</div>
+<div class="foldopen" id="foldopen00221" data-start="" data-end="">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classcore_1_1_student.html#a2e11c48b0a10ccc6df9bc696f5075e37">  221</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classcore_1_1_student.html#a2e11c48b0a10ccc6df9bc696f5075e37">complementFaculty</a>(self):</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="comment"># 学部名を取得するための正規表現</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        faculty_patterns = {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="stringliteral">&quot;国&quot;</span>: <span class="stringliteral">&quot;国際教養学部&quot;</span>,</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="stringliteral">&quot;文&quot;</span>: <span class="stringliteral">&quot;文学部&quot;</span>,</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="stringliteral">&quot;法&quot;</span>: <span class="stringliteral">&quot;法政経学部&quot;</span>,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="stringliteral">&quot;教&quot;</span>: <span class="stringliteral">&quot;教育学部&quot;</span>,</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="stringliteral">&quot;理&quot;</span>: <span class="stringliteral">&quot;理学部&quot;</span>,</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="stringliteral">&quot;工&quot;</span>: <span class="stringliteral">&quot;工学部&quot;</span>,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="stringliteral">&quot;情&quot;</span>: <span class="stringliteral">&quot;情報・データサイエンス学部&quot;</span>,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="stringliteral">&quot;園&quot;</span>: <span class="stringliteral">&quot;園芸学部&quot;</span>,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="stringliteral">&quot;医&quot;</span>: <span class="stringliteral">&quot;医学部&quot;</span>,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="stringliteral">&quot;薬&quot;</span>: <span class="stringliteral">&quot;薬学部&quot;</span>,</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="stringliteral">&quot;看&quot;</span>: <span class="stringliteral">&quot;看護学部&quot;</span>,</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">for</span> pattern, faculty <span class="keywordflow">in</span> faculty_patterns.items():</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            <span class="keywordflow">if</span> pattern <span class="keywordflow">in</span> self.<a class="code hl_variable" href="classcore_1_1_student.html#a83ee0547ebbd32ff5744dfe5b3b2f305">major</a>:</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="keywordflow">return</span> faculty</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span></div>
+</div>
+</div>
+<div class="ttc" id="aclasscore_1_1_student_html"><div class="ttname"><a href="classcore_1_1_student.html">core.Student</a></div><div class="ttdef"><b>Definition</b> <a href="#l00094">core.py:94</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a0a7e858d1b6e9f0aef6b3cea42c0089d"><div class="ttname"><a href="classcore_1_1_student.html#a0a7e858d1b6e9f0aef6b3cea42c0089d">core.Student.id</a></div><div class="ttdeci">id</div><div class="ttdef"><b>Definition</b> <a href="#l00140">core.py:140</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a105919ca2c2e76b63b926c652aa23911"><div class="ttname"><a href="classcore_1_1_student.html#a105919ca2c2e76b63b926c652aa23911">core.Student.__init__</a></div><div class="ttdeci">__init__(self, str name=&quot;&quot;, str nameKana=&quot;&quot;, str id=&quot;&quot;, int gread=0, str faculty=&quot;&quot;, str department=&quot;&quot;, str major=&quot;&quot;, str field=&quot;&quot;, datetime birth=None, str zip_code=&quot;&quot;, str address=&quot;&quot;, str phone_number=&quot;&quot;, str email=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> <a href="#l00136">core.py:137</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a1ede1881aad308bbaf544b182f5d21de"><div class="ttname"><a href="classcore_1_1_student.html#a1ede1881aad308bbaf544b182f5d21de">core.Student.getDict</a></div><div class="ttdeci">getDict(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00185">core.py:185</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a2b425512c6295dbb20d72d5169cffbf8"><div class="ttname"><a href="classcore_1_1_student.html#a2b425512c6295dbb20d72d5169cffbf8">core.Student.zip_code</a></div><div class="ttdeci">zip_code</div><div class="ttdef"><b>Definition</b> <a href="#l00146">core.py:146</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a2e11c48b0a10ccc6df9bc696f5075e37"><div class="ttname"><a href="classcore_1_1_student.html#a2e11c48b0a10ccc6df9bc696f5075e37">core.Student.complementFaculty</a></div><div class="ttdeci">complementFaculty(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00221">core.py:221</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a3b0ed3b38dcd7380fdc001aa7360a803"><div class="ttname"><a href="classcore_1_1_student.html#a3b0ed3b38dcd7380fdc001aa7360a803">core.Student.SetAddress</a></div><div class="ttdeci">SetAddress(self, rawaddress)</div><div class="ttdef"><b>Definition</b> <a href="#l00215">core.py:215</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a429cc47ff40b79d942898a5d6e1ececc"><div class="ttname"><a href="classcore_1_1_student.html#a429cc47ff40b79d942898a5d6e1ececc">core.Student.__eq__</a></div><div class="ttdeci">__eq__(self, other)</div><div class="ttdef"><b>Definition</b> <a href="#l00164">core.py:164</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a4c21799273c9cafeb281a11e2586b4b3"><div class="ttname"><a href="classcore_1_1_student.html#a4c21799273c9cafeb281a11e2586b4b3">core.Student.nameKana</a></div><div class="ttdeci">nameKana</div><div class="ttdef"><b>Definition</b> <a href="#l00139">core.py:139</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a4d1d620037a83713f776f186fbcb5dd2"><div class="ttname"><a href="classcore_1_1_student.html#a4d1d620037a83713f776f186fbcb5dd2">core.Student.faculty</a></div><div class="ttdeci">str faculty</div><div class="ttdef"><b>Definition</b> <a href="#l00142">core.py:142</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a4e59b4d5a4f133c678990be393ad8ef8"><div class="ttname"><a href="classcore_1_1_student.html#a4e59b4d5a4f133c678990be393ad8ef8">core.Student.facultycomp</a></div><div class="ttdeci">str facultycomp</div><div class="ttdef"><b>Definition</b> <a href="#l00152">core.py:152</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a64b0645015bd8b70d978b702fd536b13"><div class="ttname"><a href="classcore_1_1_student.html#a64b0645015bd8b70d978b702fd536b13">core.Student.phone_number</a></div><div class="ttdeci">phone_number</div><div class="ttdef"><b>Definition</b> <a href="#l00148">core.py:148</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a6a31a0fe29309c9eef9af5172a8cc3d6"><div class="ttname"><a href="classcore_1_1_student.html#a6a31a0fe29309c9eef9af5172a8cc3d6">core.Student.SpilitFac</a></div><div class="ttdeci">SpilitFac(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00196">core.py:196</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a6dd11ee5f6229210dd8c85c3a9d7a14f"><div class="ttname"><a href="classcore_1_1_student.html#a6dd11ee5f6229210dd8c85c3a9d7a14f">core.Student.name</a></div><div class="ttdeci">name</div><div class="ttdef"><b>Definition</b> <a href="#l00138">core.py:138</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a725d727177d5395a083d75b29aacd298"><div class="ttname"><a href="classcore_1_1_student.html#a725d727177d5395a083d75b29aacd298">core.Student.course</a></div><div class="ttdeci">str course</div><div class="ttdef"><b>Definition</b> <a href="#l00151">core.py:151</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_a83ee0547ebbd32ff5744dfe5b3b2f305"><div class="ttname"><a href="classcore_1_1_student.html#a83ee0547ebbd32ff5744dfe5b3b2f305">core.Student.major</a></div><div class="ttdeci">major</div><div class="ttdef"><b>Definition</b> <a href="#l00144">core.py:144</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_aa7d84ce9a54e8b703aa6c15d5a8731e8"><div class="ttname"><a href="classcore_1_1_student.html#aa7d84ce9a54e8b703aa6c15d5a8731e8">core.Student.isLiveChiba</a></div><div class="ttdeci">bool isLiveChiba</div><div class="ttdef"><b>Definition</b> <a href="#l00155">core.py:155</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_ab041d5d11f770bd04d3302399090c84d"><div class="ttname"><a href="classcore_1_1_student.html#ab041d5d11f770bd04d3302399090c84d">core.Student.field</a></div><div class="ttdeci">field</div><div class="ttdef"><b>Definition</b> <a href="#l00150">core.py:150</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_ab9bf3e03fe969a3f9282656d4131c054"><div class="ttname"><a href="classcore_1_1_student.html#ab9bf3e03fe969a3f9282656d4131c054">core.Student.department</a></div><div class="ttdeci">str department</div><div class="ttdef"><b>Definition</b> <a href="#l00143">core.py:143</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_acf531c1046abf6573c235e53b994d2eb"><div class="ttname"><a href="classcore_1_1_student.html#acf531c1046abf6573c235e53b994d2eb">core.Student.gread</a></div><div class="ttdeci">gread</div><div class="ttdef"><b>Definition</b> <a href="#l00141">core.py:141</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_ad262e45790c9d03700ec378cb67e0774"><div class="ttname"><a href="classcore_1_1_student.html#ad262e45790c9d03700ec378cb67e0774">core.Student.GetHeader</a></div><div class="ttdeci">GetHeader()</div><div class="ttdef"><b>Definition</b> <a href="#l00115">core.py:115</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_ad97c43cde41b07ec33cd66933e0fc28d"><div class="ttname"><a href="classcore_1_1_student.html#ad97c43cde41b07ec33cd66933e0fc28d">core.Student.email</a></div><div class="ttdeci">email</div><div class="ttdef"><b>Definition</b> <a href="#l00149">core.py:149</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_aef866a7701523e95cbc5f94bb4cdf462"><div class="ttname"><a href="classcore_1_1_student.html#aef866a7701523e95cbc5f94bb4cdf462">core.Student.file_path</a></div><div class="ttdeci">str file_path</div><div class="ttdef"><b>Definition</b> <a href="#l00153">core.py:153</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_af07f9f1539019d03f1fc6cdeabcbfabe"><div class="ttname"><a href="classcore_1_1_student.html#af07f9f1539019d03f1fc6cdeabcbfabe">core.Student.EstimateFaculty</a></div><div class="ttdeci">EstimateFaculty(self, str patternFile)</div><div class="ttdef"><b>Definition</b> <a href="#l00175">core.py:175</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_af3d8b3e574b3fb03ac29de14f6199466"><div class="ttname"><a href="classcore_1_1_student.html#af3d8b3e574b3fb03ac29de14f6199466">core.Student.address</a></div><div class="ttdeci">address</div><div class="ttdef"><b>Definition</b> <a href="#l00147">core.py:147</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_af5a982565bb661bede766dc426a66eec"><div class="ttname"><a href="classcore_1_1_student.html#af5a982565bb661bede766dc426a66eec">core.Student.birth</a></div><div class="ttdeci">birth</div><div class="ttdef"><b>Definition</b> <a href="#l00145">core.py:145</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_af76adde2bef1dd899d2d797ed31160d9"><div class="ttname"><a href="classcore_1_1_student.html#af76adde2bef1dd899d2d797ed31160d9">core.Student.__str__</a></div><div class="ttdeci">__str__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00161">core.py:161</a></div></div>
+<div class="ttc" id="aclasscore_1_1_student_html_afefe35f33b7714b5c4a18d426adf1f44"><div class="ttname"><a href="classcore_1_1_student.html#afefe35f33b7714b5c4a18d426adf1f44">core.Student.facultys</a></div><div class="ttdeci">facultys</div><div class="ttdef"><b>Definition</b> <a href="#l00176">core.py:176</a></div></div>
+<div class="ttc" id="anamespace_string__helper_html_a8fbd3dd055e54b4ba47cab39ea93b69b"><div class="ttname"><a href="namespace_string__helper.html#a8fbd3dd055e54b4ba47cab39ea93b69b">String_helper.Replace</a></div><div class="ttdeci">Replace(str obj, str newchar)</div><div class="ttdef"><b>Definition</b> <a href="_string__helper_8py_source.html#l00029">String_helper.py:29</a></div></div>
+<div class="ttc" id="anamespacecore_html_a58713c15e7d8678c7ed4f77d5efe8885"><div class="ttname"><a href="namespacecore.html#a58713c15e7d8678c7ed4f77d5efe8885">core.date_to_str</a></div><div class="ttdeci">date_to_str(str date)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">core.py:56</a></div></div>
+<div class="ttc" id="anamespacecore_html_a95629f5084854cea362a505519423502"><div class="ttname"><a href="namespacecore.html#a95629f5084854cea362a505519423502">core.loadDir</a></div><div class="ttdeci">loadDir(dirPath)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">core.py:25</a></div></div>
+<div class="ttc" id="anamespacecore_html_adcd673e162ad9a5d950c9d709f8717c0"><div class="ttname"><a href="namespacecore.html#adcd673e162ad9a5d950c9d709f8717c0">core.getFacPatterns</a></div><div class="ttdeci">getFacPatterns(str patternFile)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">core.py:15</a></div></div>
+<div class="ttc" id="anamespaceencoding_ditector_html_ad6718b7917955b7f8ecc8c8fa9fb9c82"><div class="ttname"><a href="namespaceencoding_ditector.html#ad6718b7917955b7f8ecc8c8fa9fb9c82">encodingDitector.encordingDItector</a></div><div class="ttdeci">encordingDItector(filepath)</div><div class="ttdef"><b>Definition</b> <a href="encoding_ditector_8py_source.html#l00009">encodingDitector.py:9</a></div></div>
+<div class="ttc" id="anamespacepdf_html_a0146168ab7eec4b69552efd92e5d6161"><div class="ttname"><a href="namespacepdf.html#a0146168ab7eec4b69552efd92e5d6161">pdf.pdf_to_student</a></div><div class="ttdeci">pdf_to_student(pdf_path)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8py_source.html#l00054">pdf.py:54</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="core_8py.html">core.py</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

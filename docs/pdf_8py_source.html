@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: pdf.py ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('pdf_8py_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pdf.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pdf_8py.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacepdf.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">@file pdf.py</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral">@brief PDF ファイルからテキストを抽出する機能を提供します。</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">@details pypdf ライブラリを使用して PDF を処理し、テキスト抽出を行います。</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">from</span> pypdf <span class="keyword">import</span> PdfReader</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> main </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> re</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> datetime</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> core</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> unicodedata</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="" data-end="">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacepdf.html#aacf54debb6a350a4d4acea249387a550">   14</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacepdf.html#aacf54debb6a350a4d4acea249387a550">pdf_to_text</a>(pdf_path):</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="stringliteral">    @brief PDF ファイルからテキストを抽出します。</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="stringliteral">    @param pdf_path (str): テキストを抽出する PDF ファイルのパス。</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="stringliteral">    @return (str): 抽出されたテキスト。</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="stringliteral">    @details pypdf ライブラリを使用して PDF ファイルを読み込み、テキストを抽出します。</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment"># PDFファイルの読み込み</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    reader = PdfReader(pdf_path)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment"># ページ数の取得</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    number_of_pages = len(reader.pages)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment"># ページの取得。この場合は、1ページ目を取得する。</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    page = reader.pages[0]</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment"># テキストの抽出</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    text = page.extract_text()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">with</span> open(f<span class="stringliteral">&quot;{pdf_path}.txt&quot;</span>, <span class="stringliteral">&#39;w&#39;</span>, encoding=<span class="stringliteral">&quot;utf-8&quot;</span>,errors=<span class="stringliteral">&#39;ignore&#39;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        f.write(unicodedata.normalize(<span class="stringliteral">&#39;NFKC&#39;</span>,text))</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> unicodedata.normalize(<span class="stringliteral">&#39;NFKC&#39;</span>,text)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+</div>
+<div class="foldopen" id="foldopen00038" data-start="" data-end="">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacepdf.html#aa7d78e0441a0ed13c17784b9e39c8039">   38</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacepdf.html#aa7d78e0441a0ed13c17784b9e39c8039">Test</a>():</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="stringliteral">    @brief PDF テキスト抽出機能をテストします。</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="stringliteral">    @details ユーザーに PDF ファイルのパスを入力させ、テキストを抽出して表示します。</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment"># テスト用のPDFファイルのパス</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    pdf_path = input(<span class="stringliteral">&quot;PDFファイルのパスを入力してください: &quot;</span>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment"># PDFからテキストを抽出</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    text = <a class="code hl_function" href="namespacepdf.html#aacf54debb6a350a4d4acea249387a550">pdf_to_text</a>(pdf_path)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment"># 抽出したテキストを表示</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    print(text)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+</div>
+<div class="foldopen" id="foldopen00054" data-start="" data-end="">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacepdf.html#a0146168ab7eec4b69552efd92e5d6161">   54</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacepdf.html#a0146168ab7eec4b69552efd92e5d6161">pdf_to_student</a>(pdf_path):</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="stringliteral">    @brief PDF ファイルから学生情報を抽出します。</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="stringliteral">    @param pdf_path (str): 学生情報を抽出する PDF ファイルのパス。</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="stringliteral">    @return (core.Student): 抽出された学生情報を持つ Student オブジェクト。</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="stringliteral">    @details 抽出されたテキストを解析して、学生の名前、ID、学部などの情報を Student オブジェクトに格納します。</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    text = <a class="code hl_function" href="namespacepdf.html#aacf54debb6a350a4d4acea249387a550">pdf_to_text</a>(pdf_path)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment"># テキストを行ごとに分割</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    lines = text.split(<span class="stringliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    stu = <a class="code hl_class" href="classcore_1_1_student.html">core.Student</a>()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    rawaddress = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">for</span> line <span class="keywordflow">in</span> lines:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        match line:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;氏名ふりがな&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                stu.nameKana = l.replace(<span class="stringliteral">&quot;氏名ふりがな&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;氏名&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                stu.name = l.replace(<span class="stringliteral">&quot;氏名&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;学籍番号&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                stu.id = l.replace(<span class="stringliteral">&quot;学籍番号&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;学年&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                greadTmp = l.replace(<span class="stringliteral">&quot;学年&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                print(greadTmp)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordflow">if</span> <span class="stringliteral">&quot;B&quot;</span> <span class="keywordflow">in</span> greadTmp <span class="keywordflow">or</span> <span class="stringliteral">&quot;学部&quot;</span> <span class="keywordflow">in</span> greadTmp:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    greadTmp = greadTmp.replace(<span class="stringliteral">&quot;B&quot;</span>,<span class="stringliteral">&quot;&quot;</span>).replace(<span class="stringliteral">&quot;学部&quot;</span>,<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">elif</span>  <span class="stringliteral">&quot;M&quot;</span> <span class="keywordflow">in</span> greadTmp <span class="keywordflow">or</span>  <span class="stringliteral">&quot;修士&quot;</span> <span class="keywordflow">in</span> greadTmp:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    greadTmp = greadTmp.replace(<span class="stringliteral">&quot;M&quot;</span>,<span class="stringliteral">&quot;&quot;</span>).replace(<span class="stringliteral">&quot;修士&quot;</span>,<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    stu.gread = 4</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">elif</span>  <span class="stringliteral">&quot;D&quot;</span> <span class="keywordflow">in</span> greadTmp <span class="keywordflow">or</span>  <span class="stringliteral">&quot;博士&quot;</span> <span class="keywordflow">in</span> greadTmp:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    greadTmp = greadTmp.replace(<span class="stringliteral">&quot;D&quot;</span>,<span class="stringliteral">&quot;&quot;</span>).replace(<span class="stringliteral">&quot;博士&quot;</span>,<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    stu.gread = 6                    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                stu.gread = stu.gread + int(greadTmp.replace(<span class="stringliteral">&quot;年&quot;</span>,<span class="stringliteral">&quot;&quot;</span>).strip())</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;学部・学科&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                stu.major = l.replace(<span class="stringliteral">&quot;学部・学科&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;生年月日&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                stu.birth = <a class="code hl_function" href="namespacecore.html#a58713c15e7d8678c7ed4f77d5efe8885">core.date_to_str</a>(l.replace(<span class="stringliteral">&quot;生年月日&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip())</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;携帯&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                number = l.replace(<span class="stringliteral">&quot;携帯TEL&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                number = number.replace(<span class="stringliteral">&quot;-&quot;</span>,<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                stu.phone_number = f<span class="stringliteral">&quot;{number[0:3]}-{number[3:7]}-{number[7:11]}&quot;</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;メールアドレス&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                stu.email = l.replace(<span class="stringliteral">&quot;メールアドレス&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            case l <span class="keywordflow">if</span> <span class="stringliteral">&quot;現住所&quot;</span> <span class="keywordflow">in</span> l:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                rawaddress = l.replace(<span class="stringliteral">&quot;現住所&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                rawaddress += <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                rawaddress += lines[lines.index(l) + 1].replace(<span class="stringliteral">&quot;現住所&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).strip()</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment"># 住所</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    stu.SetAddress(rawaddress)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment"># 学部</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    stu.SpilitFac()</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    stu.file_path = pdf_path</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> stu</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">#子プロセスとして呼ばれてない時</span></div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="namespacepdf.html#aa7d78e0441a0ed13c17784b9e39c8039">Test</a>()</div>
+<div class="ttc" id="aclasscore_1_1_student_html"><div class="ttname"><a href="classcore_1_1_student.html">core.Student</a></div><div class="ttdef"><b>Definition</b> <a href="core_8py_source.html#l00094">core.py:94</a></div></div>
+<div class="ttc" id="anamespacecore_html_a58713c15e7d8678c7ed4f77d5efe8885"><div class="ttname"><a href="namespacecore.html#a58713c15e7d8678c7ed4f77d5efe8885">core.date_to_str</a></div><div class="ttdeci">date_to_str(str date)</div><div class="ttdef"><b>Definition</b> <a href="core_8py_source.html#l00056">core.py:56</a></div></div>
+<div class="ttc" id="anamespacepdf_html_a0146168ab7eec4b69552efd92e5d6161"><div class="ttname"><a href="namespacepdf.html#a0146168ab7eec4b69552efd92e5d6161">pdf.pdf_to_student</a></div><div class="ttdeci">pdf_to_student(pdf_path)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">pdf.py:54</a></div></div>
+<div class="ttc" id="anamespacepdf_html_aa7d78e0441a0ed13c17784b9e39c8039"><div class="ttname"><a href="namespacepdf.html#aa7d78e0441a0ed13c17784b9e39c8039">pdf.Test</a></div><div class="ttdeci">Test()</div><div class="ttdef"><b>Definition</b> <a href="#l00038">pdf.py:38</a></div></div>
+<div class="ttc" id="anamespacepdf_html_aacf54debb6a350a4d4acea249387a550"><div class="ttname"><a href="namespacepdf.html#aacf54debb6a350a4d4acea249387a550">pdf.pdf_to_text</a></div><div class="ttdeci">pdf_to_text(pdf_path)</div><div class="ttdef"><b>Definition</b> <a href="#l00014">pdf.py:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="pdf_8py.html">pdf.py</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

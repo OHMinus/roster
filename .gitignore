@@ -175,3 +175,5 @@ cython_debug/
 
 #test
 testcase/*
+doxyfilter_python.py
+Doxyfile

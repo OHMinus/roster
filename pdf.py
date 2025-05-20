@@ -1,4 +1,8 @@
-# ライブラリのインポート
+"""
+@file pdf.py
+@brief PDF ファイルからテキストを抽出する機能を提供します。
+@details pypdf ライブラリを使用して PDF を処理し、テキスト抽出を行います。
+"""
 from pypdf import PdfReader
 import main 
 import re
@@ -8,6 +12,12 @@ import unicodedata
 
 
 def pdf_to_text(pdf_path):
+    """
+    @brief PDF ファイルからテキストを抽出します。
+    @param pdf_path (str): テキストを抽出する PDF ファイルのパス。
+    @return (str): 抽出されたテキスト。
+    @details pypdf ライブラリを使用して PDF ファイルを読み込み、テキストを抽出します。
+    """
     # PDFファイルの読み込み
     reader = PdfReader(pdf_path)
 
@@ -26,6 +36,10 @@ def pdf_to_text(pdf_path):
     return unicodedata.normalize('NFKC',text)
 
 def Test():
+    """
+    @brief PDF テキスト抽出機能をテストします。
+    @details ユーザーに PDF ファイルのパスを入力させ、テキストを抽出して表示します。
+    """
     # テスト用のPDFファイルのパス
     pdf_path = input("PDFファイルのパスを入力してください: ")
 
@@ -38,6 +52,12 @@ def Test():
 
 
 def pdf_to_student(pdf_path):
+    """
+    @brief PDF ファイルから学生情報を抽出します。
+    @param pdf_path (str): 学生情報を抽出する PDF ファイルのパス。
+    @return (core.Student): 抽出された学生情報を持つ Student オブジェクト。
+    @details 抽出されたテキストを解析して、学生の名前、ID、学部などの情報を Student オブジェクトに格納します。
+    """
     text = pdf_to_text(pdf_path)
 
     # テキストを行ごとに分割
@@ -75,6 +95,8 @@ def pdf_to_student(pdf_path):
                 number = l.replace("携帯TEL", "").strip()
                 number = number.replace("-","")
                 stu.phone_number = f"{number[0:3]}-{number[3:7]}-{number[7:11]}"
+            case l if "性別" in l:
+                stu.sex = l.replace("性別", "").strip()
             case l if "メールアドレス" in l:
                 stu.email = l.replace("メールアドレス", "").strip()
             case l if "現住所" in l:
@@ -92,5 +114,6 @@ def pdf_to_student(pdf_path):
 
     return stu
 
+#子プロセスとして呼ばれてない時
 if __name__ == "__main__":
     Test()

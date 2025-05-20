@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: core.Student クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classcore_1_1_student.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="classcore_1_1_student-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">core.Student クラス</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a105919ca2c2e76b63b926c652aa23911" id="r_a105919ca2c2e76b63b926c652aa23911"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105919ca2c2e76b63b926c652aa23911">__init__</a> (self, str <a class="el" href="#a6dd11ee5f6229210dd8c85c3a9d7a14f">name</a>=&quot;&quot;, str <a class="el" href="#a4c21799273c9cafeb281a11e2586b4b3">nameKana</a>=&quot;&quot;, str <a class="el" href="#a0a7e858d1b6e9f0aef6b3cea42c0089d">id</a>=&quot;&quot;, int <a class="el" href="#acf531c1046abf6573c235e53b994d2eb">gread</a>=0, str <a class="el" href="#a4d1d620037a83713f776f186fbcb5dd2">faculty</a>=&quot;&quot;, str <a class="el" href="#ab9bf3e03fe969a3f9282656d4131c054">department</a>=&quot;&quot;, str <a class="el" href="#a83ee0547ebbd32ff5744dfe5b3b2f305">major</a>=&quot;&quot;, str <a class="el" href="#ab041d5d11f770bd04d3302399090c84d">field</a>=&quot;&quot;, datetime <a class="el" href="#af5a982565bb661bede766dc426a66eec">birth</a>=None, str <a class="el" href="#a2b425512c6295dbb20d72d5169cffbf8">zip_code</a>=&quot;&quot;, str <a class="el" href="#af3d8b3e574b3fb03ac29de14f6199466">address</a>=&quot;&quot;, str <a class="el" href="#a64b0645015bd8b70d978b702fd536b13">phone_number</a>=&quot;&quot;, str <a class="el" href="#ad97c43cde41b07ec33cd66933e0fc28d">email</a>=&quot;&quot;)</td></tr>
+<tr class="separator:a105919ca2c2e76b63b926c652aa23911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af76adde2bef1dd899d2d797ed31160d9" id="r_af76adde2bef1dd899d2d797ed31160d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af76adde2bef1dd899d2d797ed31160d9">__str__</a> (self)</td></tr>
+<tr class="separator:af76adde2bef1dd899d2d797ed31160d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429cc47ff40b79d942898a5d6e1ececc" id="r_a429cc47ff40b79d942898a5d6e1ececc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a429cc47ff40b79d942898a5d6e1ececc">__eq__</a> (self, other)</td></tr>
+<tr class="separator:a429cc47ff40b79d942898a5d6e1ececc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07f9f1539019d03f1fc6cdeabcbfabe" id="r_af07f9f1539019d03f1fc6cdeabcbfabe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af07f9f1539019d03f1fc6cdeabcbfabe">EstimateFaculty</a> (self, str patternFile)</td></tr>
+<tr class="separator:af07f9f1539019d03f1fc6cdeabcbfabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ede1881aad308bbaf544b182f5d21de" id="r_a1ede1881aad308bbaf544b182f5d21de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ede1881aad308bbaf544b182f5d21de">getDict</a> (self)</td></tr>
+<tr class="separator:a1ede1881aad308bbaf544b182f5d21de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a31a0fe29309c9eef9af5172a8cc3d6" id="r_a6a31a0fe29309c9eef9af5172a8cc3d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a31a0fe29309c9eef9af5172a8cc3d6">SpilitFac</a> (self)</td></tr>
+<tr class="separator:a6a31a0fe29309c9eef9af5172a8cc3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0ed3b38dcd7380fdc001aa7360a803" id="r_a3b0ed3b38dcd7380fdc001aa7360a803"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b0ed3b38dcd7380fdc001aa7360a803">SetAddress</a> (self, rawaddress)</td></tr>
+<tr class="separator:a3b0ed3b38dcd7380fdc001aa7360a803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e11c48b0a10ccc6df9bc696f5075e37" id="r_a2e11c48b0a10ccc6df9bc696f5075e37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e11c48b0a10ccc6df9bc696f5075e37">complementFaculty</a> (self)</td></tr>
+<tr class="separator:a2e11c48b0a10ccc6df9bc696f5075e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad262e45790c9d03700ec378cb67e0774" id="r_ad262e45790c9d03700ec378cb67e0774"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad262e45790c9d03700ec378cb67e0774">GetHeader</a> ()</td></tr>
+<tr class="separator:ad262e45790c9d03700ec378cb67e0774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a6dd11ee5f6229210dd8c85c3a9d7a14f" id="r_a6dd11ee5f6229210dd8c85c3a9d7a14f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dd11ee5f6229210dd8c85c3a9d7a14f">name</a> = name</td></tr>
+<tr class="separator:a6dd11ee5f6229210dd8c85c3a9d7a14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c21799273c9cafeb281a11e2586b4b3" id="r_a4c21799273c9cafeb281a11e2586b4b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c21799273c9cafeb281a11e2586b4b3">nameKana</a> = nameKana</td></tr>
+<tr class="separator:a4c21799273c9cafeb281a11e2586b4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7e858d1b6e9f0aef6b3cea42c0089d" id="r_a0a7e858d1b6e9f0aef6b3cea42c0089d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a7e858d1b6e9f0aef6b3cea42c0089d">id</a> = id</td></tr>
+<tr class="separator:a0a7e858d1b6e9f0aef6b3cea42c0089d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf531c1046abf6573c235e53b994d2eb" id="r_acf531c1046abf6573c235e53b994d2eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf531c1046abf6573c235e53b994d2eb">gread</a> = gread</td></tr>
+<tr class="separator:acf531c1046abf6573c235e53b994d2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d1d620037a83713f776f186fbcb5dd2" id="r_a4d1d620037a83713f776f186fbcb5dd2"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d1d620037a83713f776f186fbcb5dd2">faculty</a> = faculty</td></tr>
+<tr class="separator:a4d1d620037a83713f776f186fbcb5dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9bf3e03fe969a3f9282656d4131c054" id="r_ab9bf3e03fe969a3f9282656d4131c054"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9bf3e03fe969a3f9282656d4131c054">department</a> = department</td></tr>
+<tr class="separator:ab9bf3e03fe969a3f9282656d4131c054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ee0547ebbd32ff5744dfe5b3b2f305" id="r_a83ee0547ebbd32ff5744dfe5b3b2f305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83ee0547ebbd32ff5744dfe5b3b2f305">major</a> = major</td></tr>
+<tr class="separator:a83ee0547ebbd32ff5744dfe5b3b2f305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a982565bb661bede766dc426a66eec" id="r_af5a982565bb661bede766dc426a66eec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a982565bb661bede766dc426a66eec">birth</a> = birth</td></tr>
+<tr class="separator:af5a982565bb661bede766dc426a66eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b425512c6295dbb20d72d5169cffbf8" id="r_a2b425512c6295dbb20d72d5169cffbf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b425512c6295dbb20d72d5169cffbf8">zip_code</a> = zip_code</td></tr>
+<tr class="separator:a2b425512c6295dbb20d72d5169cffbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d8b3e574b3fb03ac29de14f6199466" id="r_af3d8b3e574b3fb03ac29de14f6199466"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3d8b3e574b3fb03ac29de14f6199466">address</a> = address</td></tr>
+<tr class="separator:af3d8b3e574b3fb03ac29de14f6199466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b0645015bd8b70d978b702fd536b13" id="r_a64b0645015bd8b70d978b702fd536b13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b0645015bd8b70d978b702fd536b13">phone_number</a> = phone_number</td></tr>
+<tr class="separator:a64b0645015bd8b70d978b702fd536b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97c43cde41b07ec33cd66933e0fc28d" id="r_ad97c43cde41b07ec33cd66933e0fc28d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad97c43cde41b07ec33cd66933e0fc28d">email</a> = email</td></tr>
+<tr class="separator:ad97c43cde41b07ec33cd66933e0fc28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab041d5d11f770bd04d3302399090c84d" id="r_ab041d5d11f770bd04d3302399090c84d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab041d5d11f770bd04d3302399090c84d">field</a> = field</td></tr>
+<tr class="separator:ab041d5d11f770bd04d3302399090c84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725d727177d5395a083d75b29aacd298" id="r_a725d727177d5395a083d75b29aacd298"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a725d727177d5395a083d75b29aacd298">course</a> = &quot;&quot;</td></tr>
+<tr class="separator:a725d727177d5395a083d75b29aacd298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e59b4d5a4f133c678990be393ad8ef8" id="r_a4e59b4d5a4f133c678990be393ad8ef8"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e59b4d5a4f133c678990be393ad8ef8">facultycomp</a> = &quot;&quot;</td></tr>
+<tr class="separator:a4e59b4d5a4f133c678990be393ad8ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef866a7701523e95cbc5f94bb4cdf462" id="r_aef866a7701523e95cbc5f94bb4cdf462"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef866a7701523e95cbc5f94bb4cdf462">file_path</a> = &quot;&quot;</td></tr>
+<tr class="separator:aef866a7701523e95cbc5f94bb4cdf462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d84ce9a54e8b703aa6c15d5a8731e8" id="r_aa7d84ce9a54e8b703aa6c15d5a8731e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d84ce9a54e8b703aa6c15d5a8731e8">isLiveChiba</a> = None</td></tr>
+<tr class="separator:aa7d84ce9a54e8b703aa6c15d5a8731e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefe35f33b7714b5c4a18d426adf1f44" id="r_afefe35f33b7714b5c4a18d426adf1f44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afefe35f33b7714b5c4a18d426adf1f44">facultys</a> = <a class="el" href="namespacecore.html#adcd673e162ad9a5d950c9d709f8717c0">getFacPatterns</a>(patternFile)</td></tr>
+<tr class="separator:afefe35f33b7714b5c4a18d426adf1f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00094">94</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a105919ca2c2e76b63b926c652aa23911" name="a105919ca2c2e76b63b926c652aa23911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105919ca2c2e76b63b926c652aa23911">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>nameKana</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>gread</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>faculty</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>department</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>major</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>field</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">datetime </td>          <td class="paramname"><span class="paramname"><em>birth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>zip_code</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>address</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>phone_number</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>email</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00136">136</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a429cc47ff40b79d942898a5d6e1ececc" name="a429cc47ff40b79d942898a5d6e1ececc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429cc47ff40b79d942898a5d6e1ececc">&#9670;&#160;</a></span>__eq__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.__eq__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00164">164</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af76adde2bef1dd899d2d797ed31160d9" name="af76adde2bef1dd899d2d797ed31160d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af76adde2bef1dd899d2d797ed31160d9">&#9670;&#160;</a></span>__str__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.__str__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00161">161</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2e11c48b0a10ccc6df9bc696f5075e37" name="a2e11c48b0a10ccc6df9bc696f5075e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e11c48b0a10ccc6df9bc696f5075e37">&#9670;&#160;</a></span>complementFaculty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.complementFaculty </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00221">221</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af07f9f1539019d03f1fc6cdeabcbfabe" name="af07f9f1539019d03f1fc6cdeabcbfabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07f9f1539019d03f1fc6cdeabcbfabe">&#9670;&#160;</a></span>EstimateFaculty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.EstimateFaculty </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>patternFile</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00175">175</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1ede1881aad308bbaf544b182f5d21de" name="a1ede1881aad308bbaf544b182f5d21de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ede1881aad308bbaf544b182f5d21de">&#9670;&#160;</a></span>getDict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.getDict </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00185">185</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad262e45790c9d03700ec378cb67e0774" name="ad262e45790c9d03700ec378cb67e0774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad262e45790c9d03700ec378cb67e0774">&#9670;&#160;</a></span>GetHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.GetHeader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00115">115</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3b0ed3b38dcd7380fdc001aa7360a803" name="a3b0ed3b38dcd7380fdc001aa7360a803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0ed3b38dcd7380fdc001aa7360a803">&#9670;&#160;</a></span>SetAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.SetAddress </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>rawaddress</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00215">215</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6a31a0fe29309c9eef9af5172a8cc3d6" name="a6a31a0fe29309c9eef9af5172a8cc3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a31a0fe29309c9eef9af5172a8cc3d6">&#9670;&#160;</a></span>SpilitFac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.SpilitFac </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00196">196</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="af3d8b3e574b3fb03ac29de14f6199466" name="af3d8b3e574b3fb03ac29de14f6199466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d8b3e574b3fb03ac29de14f6199466">&#9670;&#160;</a></span>address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.address = address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00147">147</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af5a982565bb661bede766dc426a66eec" name="af5a982565bb661bede766dc426a66eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a982565bb661bede766dc426a66eec">&#9670;&#160;</a></span>birth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.birth = birth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00145">145</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a725d727177d5395a083d75b29aacd298" name="a725d727177d5395a083d75b29aacd298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725d727177d5395a083d75b29aacd298">&#9670;&#160;</a></span>course</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str core.Student.course = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00151">151</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab9bf3e03fe969a3f9282656d4131c054" name="ab9bf3e03fe969a3f9282656d4131c054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9bf3e03fe969a3f9282656d4131c054">&#9670;&#160;</a></span>department</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str core.Student.department = department</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00143">143</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad97c43cde41b07ec33cd66933e0fc28d" name="ad97c43cde41b07ec33cd66933e0fc28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97c43cde41b07ec33cd66933e0fc28d">&#9670;&#160;</a></span>email</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.email = email</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00149">149</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4d1d620037a83713f776f186fbcb5dd2" name="a4d1d620037a83713f776f186fbcb5dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d1d620037a83713f776f186fbcb5dd2">&#9670;&#160;</a></span>faculty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str core.Student.faculty = faculty</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00142">142</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4e59b4d5a4f133c678990be393ad8ef8" name="a4e59b4d5a4f133c678990be393ad8ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e59b4d5a4f133c678990be393ad8ef8">&#9670;&#160;</a></span>facultycomp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str core.Student.facultycomp = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00152">152</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afefe35f33b7714b5c4a18d426adf1f44" name="afefe35f33b7714b5c4a18d426adf1f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afefe35f33b7714b5c4a18d426adf1f44">&#9670;&#160;</a></span>facultys</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.facultys = <a class="el" href="namespacecore.html#adcd673e162ad9a5d950c9d709f8717c0">getFacPatterns</a>(patternFile)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00176">176</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab041d5d11f770bd04d3302399090c84d" name="ab041d5d11f770bd04d3302399090c84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab041d5d11f770bd04d3302399090c84d">&#9670;&#160;</a></span>field</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.field = field</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00150">150</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aef866a7701523e95cbc5f94bb4cdf462" name="aef866a7701523e95cbc5f94bb4cdf462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef866a7701523e95cbc5f94bb4cdf462">&#9670;&#160;</a></span>file_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str core.Student.file_path = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00153">153</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acf531c1046abf6573c235e53b994d2eb" name="acf531c1046abf6573c235e53b994d2eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf531c1046abf6573c235e53b994d2eb">&#9670;&#160;</a></span>gread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.gread = gread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00141">141</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0a7e858d1b6e9f0aef6b3cea42c0089d" name="a0a7e858d1b6e9f0aef6b3cea42c0089d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a7e858d1b6e9f0aef6b3cea42c0089d">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.id = id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00140">140</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa7d84ce9a54e8b703aa6c15d5a8731e8" name="aa7d84ce9a54e8b703aa6c15d5a8731e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d84ce9a54e8b703aa6c15d5a8731e8">&#9670;&#160;</a></span>isLiveChiba</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool core.Student.isLiveChiba = None</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00155">155</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a83ee0547ebbd32ff5744dfe5b3b2f305" name="a83ee0547ebbd32ff5744dfe5b3b2f305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ee0547ebbd32ff5744dfe5b3b2f305">&#9670;&#160;</a></span>major</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.major = major</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00144">144</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6dd11ee5f6229210dd8c85c3a9d7a14f" name="a6dd11ee5f6229210dd8c85c3a9d7a14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd11ee5f6229210dd8c85c3a9d7a14f">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.name = name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00138">138</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4c21799273c9cafeb281a11e2586b4b3" name="a4c21799273c9cafeb281a11e2586b4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c21799273c9cafeb281a11e2586b4b3">&#9670;&#160;</a></span>nameKana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.nameKana = nameKana</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00139">139</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a64b0645015bd8b70d978b702fd536b13" name="a64b0645015bd8b70d978b702fd536b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b0645015bd8b70d978b702fd536b13">&#9670;&#160;</a></span>phone_number</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.phone_number = phone_number</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00148">148</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2b425512c6295dbb20d72d5169cffbf8" name="a2b425512c6295dbb20d72d5169cffbf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b425512c6295dbb20d72d5169cffbf8">&#9670;&#160;</a></span>zip_code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">core.Student.zip_code = zip_code</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="core_8py_source.html">core.py</a> の <a class="el" href="core_8py_source.html#l00146">146</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="core_8py_source.html">core.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="classcore_1_1_student.html">Student</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

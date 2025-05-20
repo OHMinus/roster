@@ -110,6 +110,7 @@ class Student:
     email : str
     file_path : str
     isLiveChiba : bool
+    sex : str
     
     @staticmethod
     def GetHeader():
@@ -119,6 +120,7 @@ class Student:
         "id":"学籍番号", 
         "gread":"学年",
         "major":"学部・学科", 
+        "sex":"性別",
         "faculty":"学部", 
         "department":"学科", 
         "course":"コース",
